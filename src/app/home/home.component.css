@@ -245,7 +245,6 @@
 /* seccion carucel */
 
 .container-carusel{
-    padding: 50px;
     flex-wrap: wrap; /* Permite que las secciones se envuelvan en pantallas pequeñas */
         
   }
@@ -281,18 +280,19 @@
   
   
   .carrusel {
+    padding-top: 50px;
     display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 80%;
-        margin: 0 auto;
-        position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
   }
 
   .imagen{
     flex: 1;
-        position: relative;
-        overflow: hidden;
+    position: relative;
+    overflow: hidden;
   }
   .imagen img {
     max-width: 100%;

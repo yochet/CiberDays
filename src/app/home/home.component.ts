@@ -59,16 +59,16 @@ export class HomeComponent implements OnInit{
   indiceActual: number = 0;
 
   siguiente() {
-    this.indiceActual = (this.indiceActual + 1) % this.imagenes.length;
+    this.indiceActual = (this.indiceActual + 1) % this.descriptions.length, this.imagenes.length;
     this.imagenActual = this.imagenes[this.indiceActual];
     this.textoActual = this.textos[this.indiceActual];
-    this.description = this.description[this.indiceActual];
+    this.description = this.descriptions[this.indiceActual];
   }
 
   anterior() {
-    this.indiceActual = (this.indiceActual - 1 + this.imagenes.length + this.descriptions.length) % this.imagenes.length;
+    this.indiceActual = (this.indiceActual - 1  + this.descriptions.length + this.imagenes.length) % this.descriptions.length, this.imagenes.length;
     this.imagenActual = this.imagenes[this.indiceActual];
     this.textoActual = this.textos[this.indiceActual];
-    this.description = this.description[this.indiceActual];
+    this.description = this.descriptions[this.indiceActual];
   }
 }
