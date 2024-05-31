@@ -1,0 +1,332 @@
+.container{
+    padding: 50px;
+    display: flex;
+    background-color: #1A36A8;
+}
+.percentage{
+    margin-top: 4px;
+}
+.vouchers{
+    margin-top: 1px;
+    position: absolute;
+    z-index: 1;
+}
+.time{
+    margin-top: 4px;
+    margin-left:35px;
+
+}
+.container-secundary{
+    display: flex;
+}
+.box{
+    margin-right: 25px;
+}
+.text{
+    color: white;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+.title{
+    margin: 0px;
+    color: white;
+    font-size: 56px;
+}
+.text-1{
+    color: white;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-right: 10px;
+}
+.text-2{
+    color: white;
+    font-size: 24px;
+}
+.container-primary{
+    width: 50%;
+}
+
+.cupon {
+    max-width: 551px;
+    height: auto; /* Esto asegura que la imagen se mantenga en su relación de aspecto original */
+  }
+
+  @media (max-width: 768px) {
+    .cupon {
+        max-width: 350px;
+        height: auto; /* Esto asegura que la imagen se mantenga en su relación de aspecto original */
+      }
+}
+
+/* formulario*/
+
+.container-from{
+    width: 50%;
+}
+.card {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    background-color: #fff;
+    border-radius: 8px;
+    width: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-content{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .form-group {
+    flex: 1 1 45%;
+    margin: 10px;
+  }
+  .form-group label {
+    font-family: Helvetica Neue LT Pr;
+    color: #595959;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-group input {
+    font-family: Helvetica Neue LT Pr;
+    color: #595959;
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px ;
+    box-sizing: border-box;
+  }
+  .form-group select {
+    font-family: Helvetica Neue LT Pr;
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px ;
+    box-sizing: border-box;
+  }
+  button {
+    margin-top: 20px;
+  }
+  
+  .checkbox-group{
+    align-items: center;
+    justify-content: center;
+    font-family: Helvetica Neue LT Pro;
+    padding: 8px;
+    
+  }
+
+  .register{
+    width: 240px;
+    height: 56px;
+    display: block;
+    margin: 0 auto; /* This centers the button horizontally */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .text-l{
+    color: #595959;
+    margin: 10px;
+    font-size: 14px;
+    font-family: Helvetica Neue LT Pr;
+    margin-bottom: 15px;
+  }
+
+  .color{
+    font-family: Helvetica Neue LT Pro;
+    color: #1A36A8;
+  }
+
+  /* seccion descuento */
+
+  .container-step{
+    padding: 50px;
+    flex-wrap: wrap; /* Permite que las secciones se envuelvan en pantallas pequeñas */
+        
+  }
+  .container-step h1{
+    color: #1A36A8;
+  }
+  .text-pasos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #595959;
+}
+
+.centered-paragraph {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.centered-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.text-pasos {
+    text-align: center;
+    padding: 10px;
+}
+
+.color-red {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .centered-paragraph {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+    .text-pasos {
+        padding: 5px;
+    }
+}
+
+  .continue-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 33%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.item h1{
+    color: #1A36A8;
+}
+
+.item p{
+    color: #595959;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+@media (max-width: 768px) {
+    .item {
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .item {
+        max-width: 48%;
+    }
+}
+
+/* seccion carucel */
+
+.container-carusel{
+    padding: 50px;
+    flex-wrap: wrap; /* Permite que las secciones se envuelvan en pantallas pequeñas */
+        
+  }
+  .container-carusel h1{
+    color: #1A36A8;
+  }
+.centered-logo {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ajustes adicionales para tamaños de pantalla específicos */
+@media (max-width: 768px) {
+    .centered-logo {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .centered-logo {
+        max-width: 60%;
+    }
+}
+
+@media (min-width: 1201px) {
+    .centered-logo {
+        max-width: 40%;
+    }
+}
+
+  
+  
+  .carrusel {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+  }
+
+  .imagen{
+    flex: 1;
+        position: relative;
+        overflow: hidden;
+  }
+  .imagen img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .texto {
+    flex: 1;
+    margin: 10px 0;
+    font-size: 20px;
+  }
+  
+  .contenedor-botones-superior {
+    position: absolute;
+    top: 10px; /* Ajusta la posición desde arriba */
+    left: 10px; /* Ajusta la posición desde la izquierda */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 20px); /* Resta el espacio de los bordes */
+    z-index: 1; /* Coloca los botones por encima de la imagen */
+  }
+  
+  .boton-izquierda,
+  .boton-derecha {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .boton-izquierda:hover,
+  .boton-derecha:hover {
+    color: #555;
+  }
+  

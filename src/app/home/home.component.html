@@ -1,0 +1,176 @@
+<app-menu></app-menu>
+<div class="home-principal">
+    <div class="container">
+        <div class="container-primary">
+            <div>
+                <div class="container-secundary">
+                    <div class="box">
+                        <mat-icon class="percentage "><img  width="37" height="34" src="assets/images/icon/percentage.png" alt=""></mat-icon>
+                        <mat-icon class="vouchers"><img  width="46" height="40" src="assets/images/icon/vouchers.png" alt=""></mat-icon>
+                        <mat-icon class="time "><img  width="37" height="34" src="assets/images/icon/time.png" alt=""></mat-icon>
+                    </div>
+                    <p class="text">ES HORA DE</p>
+                </div>
+                <div>
+                    <p class="title">CYBER DAYS</p>
+                <div class="container-secundary">
+                    <p class="text-1">EN</p>
+                    <p class="title">Más uno</p>
+                </div>
+                <img width="255" height="24" src="assets/images/subrayado.png" alt="">
+                <p class="text-2">Del <strong>28</strong> al <strong>30</strong> de marzo</p>
+                <img class="cupon" src="assets/images/cupon.png" alt="" >
+                </div>
+
+            </div>
+            
+            
+
+        </div>
+        
+        <div class="container-from">
+            <div class="card">
+                <div class="card-content">
+                    <h2 class="card-title">Completa tus datos</h2>
+                    <img width="235" height="15" src="assets/images/subrayado-blue.png" alt="">
+                    
+                    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                        <div class="form-container">
+                          <div class="form-group">
+                            <label for="firstName">Nombres</label>
+                            <input id="firstName" formControlName="firstName" placeholder="Ingrese sus nombres"/>
+                            <div *ngIf="form.get('firstName')?.invalid && form.get('firstName')?.touched">
+                                * Campo Requerido.
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="lastName">Apellidos</label>
+                            <input id="lastName" formControlName="lastName" placeholder="Ingrese sus apellidos"/>
+                            <div *ngIf="form.get('lastName')?.invalid && form.get('lastName')?.touched">
+                                * Campo Requerido.
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="phone">Teléfono celular</label>
+                            <input id="phone" formControlName="phone"  placeholder="Ingrese su número teléfono"/>
+                            <div *ngIf="form.get('phone')?.invalid && form.get('phone')?.touched">
+                                * Campo Requerido.
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input id="email" formControlName="email" placeholder="Ingrese su correo electrónico"/>
+                            <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+                              Ingrese un correo valido.
+                            </div>
+                          </div>
+                          
+
+                          <div class="form-group">
+                            <label for="options">Tus favoritos:</label>
+                            <select id="options" [(ngModel)]="selectedOption">
+                              <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input id="email" formControlName="email" placeholder="Ingrese su correo electrónico"/>
+                            <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+                              Ingrese un correo valido.
+                            </div>
+                          </div>
+
+                            <label class="checkbox-group">
+                                <input type="checkbox"  /> Acepto los <strong class="color" >Términos y políticas de privacidad</strong>
+                            </label>
+                            <label class="checkbox-group">
+                                <input type="checkbox"  /> Acepto el <strong class="color">Uso de datos personales</strong>
+                            </label>
+                          
+
+                        </div>
+                        <button class="register" type="submit" [disabled]="form.invalid">Registarme</button>
+
+                        <p class="text-l">Aprovecha las mejores ofertas y descuentos en pollo, pavo, cerdo, congelados, embutidos
+                            y mucho más. No te pierdas de nada estos Cyberdays registrándote y obteniendo grandes descuentos exclusivos.</p>
+                      </form>
+                      
+                </div>
+            </div>  
+        </div>
+    </div>
+    
+    <div class="container-step">
+        <div >
+            <img width="100%" src="assets/images/divider.png" alt="">
+            <h1 class="centered-paragraph">¿Como obtengo el descuento por Cyber Days?</h1>
+            <img class="centered-image" src="assets/images/subrayado.png" alt="">
+            <div class="text-pasos">
+                <p class="centered-paragraph">Para adquirir nuestro descuento especial por <strong class="color-red">Cyber Days</strong> sigue los siguientes pasos</p>
+            </div>
+            <div class="continue-steps">
+                <div class="item">
+                    <h1>Paso 1</h1>
+                    <img width="244" height="244" src="assets/images/icon/step-one.png" alt="">
+                    <h1>Regístrate</h1>
+                    <p>Completa el formulario con tus datos personales y acepta los términos.</p>
+                </div>
+                <div class="item" >
+                    <h1>Paso 2</h1>
+                    <img width="244" height="244" src="assets/images/icon/step-two.png" alt="">
+                    <h1>Recibe un cupón</h1>
+                    <p>Recibirás un correo electrónico donde podrás ver el cupón de descuento.</p>
+                </div>
+                <div class="item">
+                    <h1>Paso 3</h1>
+                    <img width="244" height="244" src="assets/images/icon/step-theer.png" alt="">
+                    <h1>Empieza a ahorrar</h1>
+                    <p>¡Y listo! Podrás usarlo del 28 al 30 de Marzo por compras en nuestra tienda online.</p>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="container-carusel">
+        <img width="100%" src="assets/images/divider.png" alt="">
+        <img width="80" height="80" class="centered-logo" src="assets/images/logo-black.png" alt="">
+        <h1 class="centered-paragraph">Las mejores tecnologías en Más uno</h1>
+        <img class="centered-image" src="assets/images/subrayado.png" alt="">
+
+        <div class="carrusel">
+            <div class="boton-izquierda">
+                <button (click)="anterior()">&#10094;</button>
+              </div>
+            <div class="texto">
+                <div>
+                    {{ textoActual }}
+                </div>
+                <div>
+                    {{ description}}
+                </div>
+                
+            </div>
+            
+
+            <div class="imagen">
+              <img width="560" [src]="imagenActual" alt="Imagen Carrusel">
+            </div>
+            <div class="contenedor-botones">
+                
+                <div class="boton-derecha">
+                  <button (click)="siguiente()">&#10095;</button>
+                </div>
+              </div>
+          </div>
+          
+          
+          
+          
+          
+    </div>
+
+        
+</div>

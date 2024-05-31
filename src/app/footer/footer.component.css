@@ -1,0 +1,47 @@
+
+.bg-footer{
+    background-color:  #1A36A8 ;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que las secciones se envuelvan en pantallas pequeñas */
+    max-width: 1200px; /* Anchura máxima del contenedor */
+    margin: 0 auto; /* Centrará el contenedor */
+    padding: 0 20px; /* Espaciado horizontal */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px; /* Ancho mínimo de cada sección para mantener la legibilidad */
+    margin: 10px; /* Margen entre secciones */
+    color: white;
+    font-family: Helvetica Neue LT Pro;
+}
+
+.contact{
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        flex: 1 1 100%; /* Cada sección ocupará todo el ancho disponible */
+        margin: 10px 0; /* Margen vertical entre secciones */
+    }
+}
+
+.icon{
+    margin-right: 35px;
+}
+
+.text{
+    font-family: Helvetica Neue LT Pro;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+
+}
+.p{
+    font-family: "Helvetica Neue LT Pro";
+}

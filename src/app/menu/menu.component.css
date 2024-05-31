@@ -1,0 +1,12 @@
+.menu{
+    background-color:  #1A36A8 ;
+    height: 118px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.logo{
+    max-width: 100%;
+    height: auto;
+}
