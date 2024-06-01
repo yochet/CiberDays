@@ -312,30 +312,39 @@
     font-size: 20px;
   }
   
-  .contenedor-botones-superior {
-    position: relative;
-    top: 10px; /* Ajusta la posición desde arriba */
-    left: 10px; /* Ajusta la posición desde la izquierda */
+  .boton-izquierda, .boton-derecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.boton-izquierda {
+    left: 10px;
+}
+
+.boton-derecha {
+    right: 10px;
+}
+
+.boton-izquierda button, .boton-derecha button {
+    background-color: rgba(0, 0, 0, 0.5); /* Cambia el color de fondo según tus necesidades */
+    border: none; /* Cambia el color del borde según tus necesidades */
+    color: white;
+    border-radius: 50%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: calc(100% - 20px); /* Resta el espacio de los bordes */
-    z-index: 1; /* Coloca los botones por encima de la imagen */
-  }
-  
-  .boton-izquierda,
-  .boton-derecha {
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
     cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .boton-izquierda:hover,
-  .boton-derecha:hover {
-    color: #555;
-  }
+}
+
+.boton-izquierda button:hover, .boton-derecha button:hover {
+    background-color: #ddd; /* Color de fondo al pasar el ratón */
+    color: black;
+}
+
+.boton-izquierda button:focus, .boton-derecha button:focus {
+    outline: none; /* Quita el borde de enfoque */
+}
   
   .title{
     font-size: 32px;
