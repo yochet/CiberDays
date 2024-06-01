@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-  
+ 
   public form: FormGroup
   options: string[] = ['Pollo', 'Embutidos', 'Cerdo', 'Pavo'];
   selectedOption: string = this.options[0];
@@ -18,7 +19,8 @@ export class HomeComponent implements OnInit{
     
   }
 
-  constructor(private fb: FormBuilder) {
+
+  constructor(private fb: FormBuilder, private router: Router) {
     this.form = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -53,22 +55,34 @@ export class HomeComponent implements OnInit{
     'Python es un lenguaje de programación ampliamente utilizado en las aplicaciones web, el desarrollo de software, la ciencia de datos y el machine learning (ML).',
     'Aquí es donde entra la UX (experiencia de usuario) y la UI (interfaz de usuario), que tienen la función de que el usuario encuentre lo que busca en el menor tiempo posible y además tenga una buena experiencia al visitar la web.'
   ]
+  urls=[
+    '/php',
+    '/python',
+    '/desing'
+  ]
   imagenActual: string = this.imagenes[0];
   textoActual: string = this.textos[0];
   description: string = this.descriptions[0];
+  texturl: string = this.urls[0]
   indiceActual: number = 0;
 
   siguiente() {
-    this.indiceActual = (this.indiceActual + 1) % this.descriptions.length, this.imagenes.length;
+    this.indiceActual = (this.indiceActual + 1) % this.descriptions.length, this.urls.length, this.imagenes.length;
     this.imagenActual = this.imagenes[this.indiceActual];
     this.textoActual = this.textos[this.indiceActual];
+    this.texturl = this.urls[this.indiceActual]
     this.description = this.descriptions[this.indiceActual];
   }
 
   anterior() {
-    this.indiceActual = (this.indiceActual - 1  + this.descriptions.length + this.imagenes.length) % this.descriptions.length, this.imagenes.length;
+    this.indiceActual = (this.indiceActual - 1  + this.descriptions.length + this.urls.length +this.imagenes.length) % this.descriptions.length, this.urls.length, this.imagenes.length;
     this.imagenActual = this.imagenes[this.indiceActual];
     this.textoActual = this.textos[this.indiceActual];
+    this.texturl = this.urls[this.indiceActual];
     this.description = this.descriptions[this.indiceActual];
+  }
+
+  irA(url: string) {
+    this.router.navigate([url]);
   }
 }

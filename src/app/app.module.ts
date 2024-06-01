@@ -14,6 +14,7 @@ import { MenuComponent } from './menu/menu.component';
 import { PythonComponent } from './python/python.component';
 import { PhpComponent } from './php/php.component';
 import { DesingComponent } from './desing/desing.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { DesingComponent } from './desing/desing.component';
     ReactiveFormsModule,
     FlexLayoutModule,
     RecaptchaModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
-<app-menu></app-menu>
+
 <div class="home-principal">
-    <div class="container">
+    <div class="container-home">
         <div class="container-primary">
             <div>
                 <div class="container-secundary">
@@ -73,13 +73,6 @@
                             </select>
                           </div>
 
-                          <div class="form-group">
-                            <label for="email">Correo electrónico</label>
-                            <input id="email" formControlName="email" placeholder="Ingrese su correo electrónico"/>
-                            <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
-                              Ingrese un correo valido.
-                            </div>
-                          </div>
 
                             <label class="checkbox-group">
                                 <input type="checkbox"  /> Acepto los <strong class="color" >Términos y políticas de privacidad</strong>
@@ -145,12 +138,16 @@
                 <button (click)="anterior()">&#10094;</button>
               </div>
             <div class="texto">
-                <div>
+                <img width="64" src="assets/images/icon/image.png" alt="Imagen Carrusel">
+                <h5 class="title">
                     {{ textoActual }}
-                </div>
-                <div>
+                </h5>
+                <p class="description">
                     {{ description}}
-                </div>
+                </p>
+                <button class="categiryView" (click)="irA(texturl)">
+                    Ver categorias
+                </button>
                 
             </div>
             
@@ -164,14 +161,12 @@
                   <button (click)="siguiente()">&#10095;</button>
                 </div>
               </div>
-          </div>
+        </div>
           
           
           
           
           
     </div>
-
         
 </div>
-
